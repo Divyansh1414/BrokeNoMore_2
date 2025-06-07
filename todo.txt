@@ -1,0 +1,7 @@
+What we did:
+Session management
+
+What we can do:
+- Banking API For all kinds of data
+- Database for storing data... Is FAISS Same?
+- 
