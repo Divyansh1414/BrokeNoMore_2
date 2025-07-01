@@ -1,33 +1,112 @@
-# BrokeNoMore!
+# 💸 Broke No More 2.0 — AI-Powered Personal Finance Agent
+
+> A smart, modular, agent-based personal finance assistant built using **LangChain**, **LangGraph**, **Gemini Pro**, and **FAISS**.  
+> From tracking expenses to offering contextual financial advice — your AI wallet just got an upgrade.
+
+---
+
+### 📌 Overview
+
+**Broke No More 2.0** is a multi-agent, AI-powered personal finance assistant that uses natural language to manage and analyze your financial data. It builds on the earlier version with major architectural upgrades, including:
+
+- 🧠 **LLM-powered agents** using Google Gemini
+- 🔄 **LangGraph memory & tool chaining**
+- 🗂️ **FAISS vector store** for semantic financial document retrieval
+- 📊 **Expense tracker agent** with dynamic state tracking
+- 💬 **General financial advisor agent** with LangChain tools
+- ⚛️ **React-style dynamic agent flow**
+
+---
+
+### 🧩 Key Features
+
+| Feature | Description |
+|--------|-------------|
+| **🧾 Expense Tracker Agent** | Parses and logs expenses via natural language |
+| **💡 Financial Advisor Agent** | Gives personalized advice based on prior data |
+| **🧠 LangGraph Agents** | Modular multi-agent flow with reactive state |
+| **🔍 Vector Search** | FAISS-powered semantic retrieval for receipts, docs |
+| **🔗 LangChain Tool Use** | Tool calling enabled (e.g., conversion, date parsing) |
+| **🪄 Gemini Pro LLM** | Fast, smart, multi-turn conversation support |
+| **📦 Local & Cloud Mode** | Works offline with FAISS or cloud Gemini API |
+| **🧱 Frontend Ready** | Easy to extend into a Streamlit or web dashboard |
+
+---
+
+### 🤖 Agent Architecture
+
+   +---------------------+
+   |  User Input (Chat)  |
+   +---------------------+
+             |
+             v
+  +------------------------+
+  | LangGraph Agent Router |
+  +------------------------+
+     /             \
+    /               \
++------------------+ +---------------------+
+| Expense Tracker | | Financial Advisor |
+| - Logs spending | | - Gives insights |
+| - Summarizes | | - Suggests action |
++------------------+ +---------------------+
+\ /
+\ /
++------------------------+
+| Vector Search & Memory |
++------------------------+
 
 
+---
 
-### *Inspiration*  
-We wanted to create a fun, intuitive, and AI-powered way to help people manage their expenses without the hassle of spreadsheets or confusing finance apps. The idea was born from our own struggles with budgeting and the need for a tool that not only tracks spending but also provides smart insights in a conversational way.  
+### ⚙️ Tech Stack
 
-### *What it does*  
-*Broke No More* tracks your transactions, categorizes expenses, and provides a real-time visualization dashboard for better financial awareness. With an integrated AI assistant, it answers questions about your spending habits, suggests savings strategies, and helps you make informed financial decisions.  
+- **LLM:** Gemini Pro via Google Generative AI SDK  
+- **Framework:** LangChain + LangGraph  
+- **Vector Store:** FAISS (custom embeddings for receipts + advice)  
+- **Backend:** Python, FastAPI (optional)  
+- **Frontend:** (Pluggable: Streamlit or React)  
+- **Tools:** tiktoken, pydantic, dateparser, numexpr  
 
-### *How we built it*  
-We developed the web app using *React* for the frontend and *Node.js with Express* for the backend. For AI capabilities, we integrated a *large language model (LLM)* to process financial queries. The database, powered by *MongoDB, efficiently stores transaction data, while **D3.js* and *Chart.js* bring the expense visualizations to life.  
+---
 
-### *Challenges we ran into*  
-- Training the AI to provide *meaningful financial advice* without overcomplicating responses.  
-- Ensuring *secure and efficient transaction tracking* while maintaining user privacy.  
-- Optimizing data visualization for *clarity and usability*, making it engaging yet informative.  
+### 📦 Example Prompts
 
-### *Accomplishments that we're proud of*  
-- Successfully integrating an *LLM for interactive financial insights*.  
-- Designing an intuitive *dashboard that makes budgeting fun and visual*.  
-- Building a *seamless user experience* that simplifies finance management for all.  
+```txt
+"Log $32 spent on dinner yesterday at Olive Garden"
+"How much did I spend on food this week?"
+"Am I saving enough compared to last month?"
+"Summarize my subscriptions"
+"Based on my rent, how much should I spend on groceries?"
 
-### *What we learned*  
-- The importance of *user-friendly financial analytics* and how data visualization impacts decision-making.  
-- How to fine-tune an *LLM for specific use cases* like expense tracking and financial planning.  
-- Best practices in *securely handling financial data* while ensuring app scalability.  
+🚀 Getting Started
+Clone the repo:
 
-### *What's next for Broke No More*  
-- *AI-powered savings recommendations* based on spending patterns.  
-- *Multi-user finance tracking* for households or small teams.  
-- *Integration with banking APIs* to automate transaction logging.  
-- A *mobile app version* for on-the-go expense management.
+git clone https://github.com/<your-username>/BrokeNoMore2.git
+cd BrokeNoMore2
+Install dependencies:
+
+pip install -r requirements.txt
+Configure your env.json:
+
+{
+  "GEMINI_API_KEY": "your-api-key",
+  "VECTOR_DB_PATH": "./faiss_index/"
+}
+
+Run the app:
+
+python main.py
+
+🎯 Use Cases
+🧾 Automate and understand your personal spending
+
+📚 Retrieve financial insights from unstructured documents
+
+🧠 Integrate with budgeting goals or salary tracking
+
+📈 Research finance agents, LLM-driven decision flows
+
+👤 Author
+Divyansh Pradhan
+📧 divyansh.pradhan@stonybrook.edu
