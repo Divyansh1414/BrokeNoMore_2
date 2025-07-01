@@ -33,32 +33,6 @@
 
 ---
 
-### 🤖 Agent Architecture
-
-   +---------------------+
-   |  User Input (Chat)  |
-   +---------------------+
-             |
-             v
-  +------------------------+
-  | LangGraph Agent Router |
-  +------------------------+
-     /             \
-    /               \
-+------------------+ +---------------------+
-| Expense Tracker | | Financial Advisor |
-| - Logs spending | | - Gives insights |
-| - Summarizes | | - Suggests action |
-+------------------+ +---------------------+
-\ /
-\ /
-+------------------------+
-| Vector Search & Memory |
-+------------------------+
-
-
----
-
 ### ⚙️ Tech Stack
 
 - **LLM:** Gemini Pro via Google Generative AI SDK  
@@ -78,9 +52,11 @@
 "Am I saving enough compared to last month?"
 "Summarize my subscriptions"
 "Based on my rent, how much should I spend on groceries?"
-
+```
 ---
+
 ### 🚀 Getting Started
+
 Clone the repo:
 
 git clone https://github.com/<your-username>/BrokeNoMore2.git
