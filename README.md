@@ -79,7 +79,8 @@
 "Summarize my subscriptions"
 "Based on my rent, how much should I spend on groceries?"
 
-🚀 Getting Started
+---
+### 🚀 Getting Started
 Clone the repo:
 
 git clone https://github.com/<your-username>/BrokeNoMore2.git
@@ -94,11 +95,15 @@ Configure your env.json:
   "VECTOR_DB_PATH": "./faiss_index/"
 }
 
-Run the app:
+---
+
+### Run the app:
 
 python main.py
 
-🎯 Use Cases
+---
+
+### 🎯 Use Cases
 🧾 Automate and understand your personal spending
 
 📚 Retrieve financial insights from unstructured documents
@@ -107,6 +112,8 @@ python main.py
 
 📈 Research finance agents, LLM-driven decision flows
 
-👤 Author
+---
+
+### 👤 Author
 Divyansh Pradhan
 📧 divyansh.pradhan@stonybrook.edu
